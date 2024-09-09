@@ -10,6 +10,8 @@ import CardRight from './card-r'
 import CardLeft from './card-l'
 import Pricing from './pricing'
 import Form from './form'
+import Footer from './footer'
+import About from './about'
 
 export default function Home() {
   return (
@@ -25,6 +27,8 @@ export default function Home() {
       <CardLeft/>
       <Pricing/>
       <Form />
+      <About />
+      <Footer />
     </>
   )    
 }

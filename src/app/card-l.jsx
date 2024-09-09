@@ -6,6 +6,7 @@ export default function CardLeft() {
   <div className="card lg:card-side bg-base-100 shadow-xl mx-4 lg:mx-32 lg:my-12">
   <figure>
     <Image
+    className="hidden lg:block"
       src={studioImage}
       alt="Album" />
   </figure>

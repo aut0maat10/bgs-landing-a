@@ -1,28 +1,67 @@
+import { useState } from 'react';
+
 export default function Form() {
+
+  const [inputs, setInputs] = useState({});
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    alert(JSON.stringify(inputs))
+  }
   return (
-    <div className="form-container text-center py-8">
+    <div className="form-container text-center py-8 px-4 w-full">
       <h2 className="text-3xl font-bold mb-12">Message to set up free consultation!</h2>
-      <form className="flex flex-col content-center flex-wrap">
+      <form className="flex flex-col content-center flex-wrap" onSubmit={handleSubmit}>
         <div className="flex gap-2">
           <input
+            name="firstname"
             type="text"
             placeholder="First Name"
-            className="input input-bordered input-primary w-full max-w-xs mb-8" 
+            className="input input-bordered input-primary w-full max-w-sm mb-8"
+            value={inputs.firstname || ""} 
+            onChange={handleChange} 
             required
           />
           <input
+            name="lastname"
             type="text"
             placeholder="Last Name"
-            className="input input-bordered input-primary w-full max-w-xs mb-8" 
+            className="input input-bordered input-primary w-full max-w-sm mb-8"
+            value={inputs.lastname || ""} 
+            onChange={handleChange}  
           />
         </div>
         <input
           type="text"
+          name="email"
           placeholder="Email"
-          className="input input-bordered input-primary w-full max-w-md mb-8" 
+          className="input input-bordered input-primary w-full max-w-lg mb-8" 
+          value={inputs.email || ""} 
+          onChange={handleChange} 
+          onInvalid={F => F.target.setCustomValidity('Please enter a valid email')} 
+          onInput={F => F.target.setCustomValidity('')} 
+          required
         />
-        <textarea className="textarea textarea-primary max-w-md mb-8" placeholder="Message"></textarea>
-        <button className="btn btn-outline btn-primary">Send</button>
+        <textarea 
+          className="textarea textarea-primary max-w-lg h-32 mb-8" 
+          placeholder="Feel free to tell me about your background and goals as a guitarist." 
+          required
+        >
+        </textarea>
+        <div className='text-center'>
+          <input 
+            type="submit" 
+            value="Send Message"
+            className="btn btn-primary bg-primary max-w-xs mb-8"
+          />
+          </div>
+        {/* <button className="btn btn-outline btn-primary">Send</button> */}
       </form>
     </div>
     

@@ -1,6 +1,6 @@
 export default function Stats() {
   return (
-    <div className="stats shadow flex mx-32">
+    <div className="stats shadow flex mx-4 lg:mx-32">
       <div className="stat text-center">
         <div className="stat-figure text-primary">
           <svg
