@@ -50,7 +50,7 @@ export default function Form() {
         />
         <textarea 
           className="textarea textarea-primary max-w-lg h-32 mb-8" 
-          placeholder="Feel free to tell me about your background and goals as a guitarist." 
+          placeholder="Feel free to tell me about your background and goals as a guitarist!" 
           required
         >
         </textarea>
