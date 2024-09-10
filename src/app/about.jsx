@@ -1,5 +1,5 @@
 import Image from "next/image"
-import studioImage from './img/Pahlman-42.jpg'
+import studioImage from '../../public/img/Pahlman-42.jpg'
 
 export default function About() {
   return (

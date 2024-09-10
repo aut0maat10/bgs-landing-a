@@ -19,7 +19,7 @@ export default function Pricing() {
         <div className="card bg-base-100 w-96 shadow-xl">
           <div className="card-body text-left">
             <h2 className="card-title text-secondary">5-Lesson Package</h2>
-            <p className="text-5xl font-bold">$275<span className="text-sm line-through font-light ml-2">$300</span></p>
+            <p className="text-5xl font-bold">$275<span className="text-sm lg:text-lg stat-title line-through font-light ml-2">$300</span></p>
             <p>$55/lesson</p>
             <p>60 minutes</p>
             <p>Online (anywhere) or in-person (Bushwick)</p>
@@ -32,7 +32,7 @@ export default function Pricing() {
         <div className="card bg-base-100 w-96 shadow-xl">
           <div className="card-body text-left">
             <h2 className="card-title text-secondary">10-Lesson Package</h2>
-            <p className="text-5xl font-bold">$500<span className="text-sm line-through font-light ml-2">$600</span></p>
+            <p className="text-5xl font-bold">$500<span className="text-sm lg:text-lg line-through font-light ml-2 stat-title">$600</span></p>
             <p>$50/lesson</p>
             <p>60 minutes</p>
             <p>Online (anywhere) or in-person (Bushwick)</p>

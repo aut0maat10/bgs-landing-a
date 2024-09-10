@@ -1,5 +1,5 @@
 import Image from "next/image"
-import studioImage from './img/hero6.jpeg'
+import studioImage from '../../public/img/guitarist.jpeg'
 
 export default function CardRight() {
   return (
@@ -7,7 +7,7 @@ export default function CardRight() {
 
   <div className="card-body lg:w-1/2 py-4 lg:py-12">
     <h2 className="card-title text-3xl font-bold">Who I Teach</h2>
-    <p className="text-lg font-bold text-secondary">Intermediate guitarists who:</p>
+    <p className="text-lg font-bold text-secondary grow-0">Intermediate guitarists who:</p>
     <ul>
       <li><span className="text-3xl ml-2 mb-2">🎸 </span>Play or want to play in bands</li>
       <li><span className="text-3xl ml-2 mb-2">🎸 </span>Struggle with technique, theory, or harmony</li>
@@ -15,9 +15,10 @@ export default function CardRight() {
       <li><span className="text-3xl ml-2 mb-2">🎸 </span>Want to contribute more to songwriting and arranging</li>
     </ul>
   </div>
-  <figure>
+  <figure className="lg:max-w-[50%] h-96">
     <Image
       src={studioImage}
+      className=""
       alt="Album" />
   </figure>
 </div>

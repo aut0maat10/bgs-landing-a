@@ -1,10 +1,10 @@
 import Image from "next/image"
-import studioImage from './img/hero6.jpeg'
+import studioImage from '../../public/img/studio.jpeg'
 
 export default function Method() {
   return (
   <div className="card lg:card-side bg-base-100 shadow-xl mx-4 lg:mx-32 lg:my-12">
-  <figure>
+  <figure className="lg:max-w-[50%] h-96">
     <Image
       src={studioImage}
       alt="Album" />
