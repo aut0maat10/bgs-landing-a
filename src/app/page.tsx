@@ -20,7 +20,7 @@ export default function Home() {
       <Hero heroImage={HeroImg} />
       <Stats />
       <div className='bg-base-200 text-center py-4'>
-      <h2 className='text-3xl font-bold p-4 lg:px-32 lg:py-12'>Are you an <span className='text-secondary'>intermediate guitarist</span> struggling to find your place in your band? Do you feel like your creativity is stifled by a lack of technique or understanding of harmony? <span className='text-secondary'>You're not alone–and I can help.</span></h2>
+      <h2 className='text-3xl font-bold p-4 lg:px-32 lg:py-12'>Are you an <span className='text-secondary'>intermediate guitarist</span> struggling to find your place in your band? Do you feel like your creativity is stifled by a lack of technique or understanding of harmony? <span className='text-secondary'>You&apos;re not alone–and I can help.</span></h2>
       </div>
       <Method />
       <CardRight/>
