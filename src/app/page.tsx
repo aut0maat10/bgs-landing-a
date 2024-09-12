@@ -9,6 +9,7 @@ import Method from './method'
 import CardRight from './card-r'
 import CardLeft from './card-l'
 import Pricing from './pricing'
+import Calendly from './calendly'
 import Form from './form'
 import Footer from './footer'
 import About from './about'
@@ -26,6 +27,7 @@ export default function Home() {
       <CardRight/>
       <CardLeft/>
       <Pricing/>
+      <Calendly />
       <Form />
       <About />
       <Footer />

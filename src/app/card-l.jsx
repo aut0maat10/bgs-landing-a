@@ -3,10 +3,10 @@ import studioImage from '../../public/img/guitarist2.jpeg'
 
 export default function CardLeft() {
   return (
-  <div className="card lg:card-side bg-base-100 shadow-xl mx-4 lg:mx-32 lg:my-12">
+  <div className="hidden lg:flex card lg:card-side bg-base-100 shadow-xl mx-4 lg:mx-32 lg:my-12">
   <figure className="max-w-[50%] h-96">
     <Image
-    className="hidden lg:block"
+    className=""
       src={studioImage}
       alt="Album" />
   </figure>
