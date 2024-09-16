@@ -10,7 +10,7 @@ export default function About() {
       height={600}
       alt="Robin Pahlman playing a Nash JM-63" />
   </figure>
-  <div className="card-body xl:w-1/2 py-4 lg:py-12 px-2">
+  <div className="card-body xl:w-1/2 py-4 lg:py-12 max-sm:px-2">
     <h2 className="card-title text-3xl text-primary">My name is Robin.</h2>
     <p className="text-sm lg:text-md">I&apos;m a guitarist, producer, and educator based in New York City. I received my music education at <span className="text-secondary">Stockholms Musikkonservatorium (SMK)</span> in Stockholm, Sweden. I started teaching guitar at 17 and now I have worked as a freelance musician and guitar teacher for 20+ years. I have worked with numerous bands and played shows all over the world – from small DIY spaces in Vienna, Austria to Carnegie Hall in New York City.<br/><br />
     I teach electric and acoustic guitar and as a freelance musician I am fluent in many genres, including pop, rock, blues, folk, funk, soul, R&B, hard rock, metal, country, and jazz. I have planned and produced numerous band workshops for children and teenagers, and I have served as music director in theater productions.<br /><br />

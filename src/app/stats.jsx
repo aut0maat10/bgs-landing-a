@@ -1,6 +1,6 @@
 export default function Stats() {
   return (
-    <div className="stats stats-vertical block m-auto md:flex lg:stats-horizontal shadow">
+    <div className="stats stats-vertical block m-auto md:flex lg:stats-horizontal shadow max-w-[70vw]">
       <div className="stat place-items-center">
         {/* <div className="stat-figure text-primary">
           <svg
