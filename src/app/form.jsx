@@ -16,7 +16,7 @@ export default function Form() {
   }
   return (
     <div className="form-container text-center py-8 px-4 w-full">
-      <h2 className="text-3xl font-bold mb-12">Questions? Shoot us a message!</h2>
+      <h2 className="text-3xl font-bold mb-12">Questions? Send a message!</h2>
       <form className="flex flex-col content-center flex-wrap" onSubmit={handleSubmit}>
         <div className="flex gap-2">
           <input

@@ -1,6 +1,10 @@
 import Image from "next/image"
 
 export default function Hero({ heroImage }) {
+  const doClick = () => {
+    const el = document.getElementById('calendlySection')
+    el.scrollIntoView({behavior: 'smooth'})
+  }
   return (
     <div className="hero bg-base-200 min-h-[70vh]">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -16,7 +20,9 @@ export default function Hero({ heroImage }) {
             <p className="text-lg"><span>&#x2714;</span>  Online lessons</p>
             <p className="text-lg pb-4"><span>&#x2714;</span> In-person lessons <span className="italic text-secondary text-sm ml-4 inline-block transform animate-pulse">Available in Brooklyn!</span></p>
           </div>
-          <button className="btn btn-primary">Get Started</button>
+          <div className="max-sm:text-center">
+          <button onClick={doClick} className="btn btn-primary">Book free call</button>
+          </div>
         </div>
       </div>
     </div>
