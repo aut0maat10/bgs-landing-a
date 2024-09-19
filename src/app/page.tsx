@@ -10,7 +10,8 @@ import CardRight from './card-r'
 import CardLeft from './card-l'
 import Pricing from './pricing'
 import Calendly from './calendly'
-import Form from './form'
+// import Form from './form'
+import TextUs from './text-us'
 import Footer from './footer'
 import About from './about'
 
@@ -28,7 +29,8 @@ export default function Home() {
       <CardLeft/>
       <Pricing/>
       <Calendly />
-      <Form />
+      <TextUs />
+      {/* <Form /> */}
       <About />
       <Footer />
     </>

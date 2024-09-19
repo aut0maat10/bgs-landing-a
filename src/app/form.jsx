@@ -10,9 +10,24 @@ export default function Form() {
     setInputs(values => ({...values, [name]: value}))
   }
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault()
-    alert(JSON.stringify(inputs))
+    console.log(JSON.stringify(inputs))
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    try {
+      const payload = JSON.stringify(inputs)
+      const response = await fetch(process.env.NEXT_PUBLIC_FORM_API_URL, {
+        method: 'POST',
+        body: payload,
+        headers: myHeaders
+      }) 
+      console.log(response)
+      // const response = fetch(import.meta.env.VITE_FORM_API_URL, payload, {headers: {'Content-Type': 'application/json'}})
+      // formSubmitted.value = true
+    } catch(error) {
+      console.log(error.message)
+    }  
   }
   return (
     <div className="form-container text-center py-8 px-4 w-full">
