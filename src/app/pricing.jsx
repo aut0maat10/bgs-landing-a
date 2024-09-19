@@ -5,9 +5,9 @@ export default function Pricing() {
     el.scrollIntoView({behavior: 'smooth'})
   }
   return (
-    <div className="pricing bg-base-200 text-center py-12">
+    <div className="pricing bg-base-200 py-12 flex flex-col items-center">
       <h2 className="text-3xl font-bold lg:mb-12">Pricing</h2>
-      <div className="flex flex-col md:flex-row justify-center">
+      <div className="flex flex-col md:flex-row justify-center gap-4">
         <div className="card bg-base-100 w-96 shadow-xl">
           <div className="card-body text-left">
             <h2 className="card-title text-secondary">One Time Lesson</h2>
