@@ -5,11 +5,11 @@ export default function TextUs() {
       <p className="text-2xl text-secondary mb-4">(347) 635-4588</p>
       <a
         className="btn btn-primary animate-pulse"
-        href="sms://+13476354588&?body=Hi, I'm interested in guitar lessons."
+        href="sms:+13476354588&?body=Hi, I'm interested in guitar lessons."
       >
         Text us!
       </a>
       <div className="text-5xl animate-bounce pl-16 mt-2">👆</div>
     </div>
-  );
+  )
 }
