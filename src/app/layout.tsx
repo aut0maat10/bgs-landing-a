@@ -6,11 +6,12 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Bushwick Guitar Studio',
-  description: 'Online and in person Guitar Lessons in Brooklyn, NY',
+  title: 'Guitar Lessons Brooklyn NY | Online | In Person',
+  description:
+    'Want to take your guitar playing to the next level? Learn to play with bands and come up with your own parts that fit the song? Take lessons with an experienced guitar teacher and musician – online or in-person.',
   openGraph: {
     title: 'Bushwick Guitar Studio',
-    description: 'Online and in-person guitar lessons in brooklyn, NY',
+    description: 'Online and in-person guitar lessons in Brooklyn, NY',
     url: 'https://bushwickguitarstudio.com',
     siteName: 'Bushwick Guitar Studio',
     images: [
