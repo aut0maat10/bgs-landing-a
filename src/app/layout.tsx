@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -34,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="synthwave">
       <body className={inter.className}>{children}</body>
+      <GoogleTagManager gtmId="AW-16871823694" />
       <GoogleAnalytics gaId="G-7E2HZHZ1Y0" />
     </html>
   )
