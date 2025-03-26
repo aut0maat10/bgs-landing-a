@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import React from 'react'
+import Script from 'next/script'
 import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -33,10 +35,33 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="synthwave">
-      <GoogleTagManager gtmId="AW-16871823694" />
-      <body className={inter.className}>{children}</body>
-
-      <GoogleAnalytics gaId="G-7E2HZHZ1Y0" />
+      <head>
+        <GoogleAnalytics gaId="G-7E2HZHZ1Y0" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16871823694"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16871823694"
+          strategy="afterInteractive"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16871823694');
+            `,
+          }}
+        />
+      </head>
+      <body>{children}</body>
     </html>
+    // <html lang="en" data-theme="synthwave">
+    //   <GoogleTagManager gtmId="AW-16871823694" />
+    //   <GoogleAnalytics gaId="G-7E2HZHZ1Y0" />
+    //   <body className={inter.className}>{children}</body>
+    // </html>
   )
 }
