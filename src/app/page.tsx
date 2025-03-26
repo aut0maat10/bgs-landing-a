@@ -19,7 +19,11 @@ import { useEffect } from 'react'
 
 export default function Home() {
   useEffect(() => {
-    sendGTMEvent({ event: 'page_view' })
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        send_to: 'AW-16871823694',
+      })
+    }
   }, [])
   return (
     <>
