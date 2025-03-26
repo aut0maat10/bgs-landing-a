@@ -14,7 +14,7 @@ export default function Hero({ heroImage }) {
       setCurrentOption(prev => (prev + 1) % options.length)
     }, 3000) // Change every 3 seconds
     return () => clearInterval(interval)
-  }, [])
+  }, [options.length])
 
   return (
     <div className="hero bg-base-200">
