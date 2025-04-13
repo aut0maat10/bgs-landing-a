@@ -27,7 +27,9 @@ export default function Hero({ heroImage }) {
         <div className="w-full lg:w-1/2">
           <p className="my-4">Unlock your creative potential with</p>
           <h1 className="text-5xl font-bold">
-            <span className="text-secondary">Guitar Lessons</span> Designed for{' '}
+            <span className="text-secondary">Guitar Lessons</span> Designed for
+            Aspiring
+            <br />{' '}
             <span className="text-primary">{options[currentOption]}</span>
           </h1>
           <div className="py-6">

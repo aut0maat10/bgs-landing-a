@@ -30,18 +30,19 @@ export default function Home() {
       <NavBar />
       <Hero heroImage={HeroImg} />
       <Stats />
-      <div className="bg-base-200 mx-2">
-        <h2 className="text-2xl md:text-3xl font-bold p-2 lg:px-32 lg:py-12 md:text-center">
-          Are you an{' '}
-          <span className="text-secondary">intermediate guitarist</span>{' '}
-          struggling to find your place in your band? Do you feel like your
-          creativity is stifled by a lack of technique or understanding of
-          harmony?{' '}
+      <div className="bg-base-200 mx-2 flex flex-col items-center justify-center">
+        <h2 className="text-2xl md:text-3xl font-bold p-2 lg:px-32 lg:py-4 md:text-center">
+          Want to sound great – but feel stuck?
           <span className="text-secondary">
             <br />
             You&apos;re not alone–and I can&nbsp;help.
           </span>
         </h2>
+        <p className="text-lg max-w-3xl text-center italic mb-4">
+          Whether you’re learning your first riffs or working on advanced
+          techniques, I’ll help you break through creative roadblocks, improve
+          your skills, and confidently fit into any band&nbsp;setting.
+        </p>
       </div>
       <Method />
       <CardRight />
