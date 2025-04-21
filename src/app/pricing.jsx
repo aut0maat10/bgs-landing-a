@@ -36,7 +36,7 @@ export default function Pricing() {
           <div className="card-body text-left">
             <h2 className="card-title text-secondary">4-Lesson Package</h2>
             <p className="text-3xl md:text-5xl font-bold">
-              $180
+              $200
               <span className="text-sm lg:text-lg stat-title line-through font-light ml-2">
                 $240
               </span>
@@ -59,7 +59,7 @@ export default function Pricing() {
           <div className="card-body text-left">
             <h2 className="card-title text-secondary">8-Lesson Package</h2>
             <p className="text-4xl md:text-5xl font-bold">
-              $350
+              $400
               <span className="text-sm lg:text-lg line-through font-light ml-2 stat-title">
                 $480
               </span>
