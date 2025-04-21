@@ -1,6 +1,6 @@
 export default function TextUs() {
   return (
-    <div className="container p-4 text-center">
+    <div className="container px-4 py-4 text-center">
       <h2 className="text-3xl font-bold mb-8">Questions? Text us!</h2>
       <p className="text-2xl text-secondary mb-4">(347) 635-4588</p>
       <a
