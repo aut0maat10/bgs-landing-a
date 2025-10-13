@@ -10,14 +10,15 @@ import Method from './method'
 import CardRight from './card-r'
 import CardLeft from './card-l'
 import Pricing from './pricing'
-import Calendly from './calendly'
+import ContactModal from './components/ContactModal'
 // import Form from './form'
-import TextUs from './text-us'
 import Footer from './footer'
-import About from './about'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalType, setModalType] = useState<'in-home' | 'general'>('general')
+
   useEffect(() => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'page_view', {
@@ -25,34 +26,48 @@ export default function Home() {
       })
     }
   }, [])
+
   return (
     <>
-      <NavBar />
-      <Hero heroImage={HeroImg} />
+      <NavBar onOpenContact={() => {
+        setModalType('general')
+        setIsModalOpen(true)
+      }} />
+      <Hero heroImage={HeroImg} onOpenContact={() => {
+        setModalType('general')
+        setIsModalOpen(true)
+      }} />
       <Stats />
-      <div className="bg-base-200 mx-2 flex flex-col items-center justify-center">
+      <div className="bg-base-200 mx-2 my-4 flex flex-col items-center justify-center">
         <h2 className="text-2xl md:text-3xl font-bold p-2 lg:px-32 lg:py-4 md:text-center">
-          Want to sound great – but feel stuck?
+          Stuck on your guitar progress?
           <span className="text-secondary">
             <br />
-            You&apos;re not alone–and I can&nbsp;help.
+            I'll help you break through and play confidently.
           </span>
         </h2>
         <p className="text-lg max-w-3xl text-center italic mb-4">
-          Whether you’re learning your first riffs or working on advanced
-          techniques, I’ll help you break through creative roadblocks, improve
-          your skills, and confidently fit into any band&nbsp;setting.
+          From your first riffs to advanced techniques, I'll guide you to
+          overcome creative roadblocks, improve your skills, and confidently fit
+          into any band or ensemble. Personalized lessons designed for musicians
+          at every stage.
         </p>
       </div>
+
       <Method />
       <CardRight />
+      <Pricing onOpenModal={(type) => {
+        setModalType(type)
+        setIsModalOpen(true)
+      }} />
       <CardLeft />
-      <Pricing />
-      <Calendly />
-      <TextUs />
       {/* <Form /> */}
-      <About />
       <Footer />
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        formType={modalType}
+      />
     </>
   )
 }
