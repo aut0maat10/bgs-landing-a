@@ -56,7 +56,7 @@ export default function Home() {
 
       <Method />
       <CardRight />
-      <Pricing onOpenModal={(type) => {
+      <Pricing onOpenModal={(type: 'in-home' | 'general') => {
         setModalType(type)
         setIsModalOpen(true)
       }} />
